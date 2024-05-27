@@ -1,5 +1,5 @@
 class Solution:
-    def check_duplicate(self, nums: List[int]) -> bool:
+    def check_duplicate(self, nums: list[int]) -> bool:
         hash_set = set()
 
         for num in nums:
