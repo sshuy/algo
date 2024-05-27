@@ -6,15 +6,13 @@
 bool CheckDuplicates(std::vector<int> nums)
 {
 	std::unordered_set<int> hash_set{};
-	int i = 0;
-	while (i < nums.size())
+	for(int i = 0; i < nums.size(); ++i)
 	{
 		if(auto iter = hash_set.find(nums[i]); iter != hash_set.end())
 		{
 			return true;
 		}
 		hash_set.insert(nums[i]);
-		++i;
 	}
 	return false;
 }
