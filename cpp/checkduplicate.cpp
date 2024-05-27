@@ -1,3 +1,4 @@
+#include <format>
 #include <iostream>
 #include <unordered_set>
 #include <vector>
@@ -15,7 +16,6 @@ bool CheckDuplicates(std::vector<int> nums)
 		hash_set.insert(nums[i]);
 		++i;
 	}
-	std::cout << "falshy\n";
 	return false;
 }
 
@@ -23,14 +23,16 @@ int main()
 {
 	std::vector<int> dupenums{1, 1, 2, 2, 3 ,3}; // prints 'stinky dupe'
 	std::vector<int> nums{1, 2, 3}; // prints 'falshy'
-	bool dupeFound = CheckDuplicates(nums);
+	bool dupeFound = CheckDuplicates(dupenums);
 	if (dupeFound)
 	{
 		std::cout << "stinky dupe\n";
+		// std::format("stinky dupe\n");
 	}
 	else 
 	{
 		std::cout << "falshy\n";
+		// std::format("falshy\n");
 	}
 	return 0;
 }
